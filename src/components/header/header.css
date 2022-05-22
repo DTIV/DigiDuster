@@ -1,0 +1,53 @@
+.logo{
+    max-width: 80px;
+}
+
+.account, .menu-btn{
+    color: var(---txt-color);
+}
+
+.top-menu-wrap{
+    background-color: var(---bg-color);
+    color: white;
+    height: 10vh;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-title{
+    font-family: 'Macondo', cursive;
+    color: var(---txt-color);
+}
+
+.net-txt{
+    color: var(---accent1);
+}
+
+.logo-title,  .account-top{
+    display: flex;
+    
+    gap: 1rem;
+    align-items: center;
+}
+
+.connect-btn, .change-token-btn{
+    padding: 0.7rem;
+    font-size: 1rem;
+    background-color: var(---accent1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: var(---brad);
+}
+
+.connect-btn:hover, .change-token-btn:hover{
+    /* color: var(---db1); */
+    background-color: var(---accent3);
+}
+
+@media screen and (max-width: 850px) {
+    .main-title{
+        display: none;
+    }
+}

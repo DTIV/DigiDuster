@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+:root{
+  ---txt-color: black;
+  ---bg-color:#E6CCB2;
+  /* ---lb1:#105ab9;
+  ---swap-hover:#2a71ce;
+  ---lb2: #75dbff; */
+  ---accent3: #3a5a40;
+  ---accent2: #a3b18a;
+  ---accent1:#588157;
+  ---db1: #7F5539;
+  ---db2: #EDE0D4;
+  ---border-sand: #DDB892;
+  ---brad: 0.5em;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  background-color: var(---bg-color);
+}
+
+.tac{
+  text-align: center;
+}
+.app-wrap{
+  /* border: solid 1px red; */
+  z-index: 2;
+  display: grid;
+  grid-template-rows: repeat(min-max,auto);
+}
+
+.main-wrap, .contract-wrap, .headerWrap{
+  width: 70%;
+  border: black solid 1px;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 1fr);
+  grid-gap: 1rem;
+  background-color: white;
+}
+
+.title{
+  text-align: center;
+}
+
+.swap-wrap-main{
+  /* border: solid orange 1px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
