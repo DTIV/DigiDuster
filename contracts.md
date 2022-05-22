@@ -9,8 +9,8 @@ description: Deployments and Contracts for DigiDuster.
 > * OolongSwap Router: `0x4df04E20cCd9a8B82634754fcB041e86c5FF085A`
 > * OolongSwap Factory: `0xab740666e226cb5b6b451eb943b0257a7cb3ce0a`
 > * WETH: `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000`
-> * DigiDuster: 0x8FE2055275195AAE539dd6919F90f7De41CC07Aa
-> * DUST: 0x14fb1D87A1FccD4A99597F8EFBC73023263d8Ea0
+> * DigiDuster: 0x04383c1357bF10741e6CB72d8C6E86d3F5DE8FdA
+> * DUST: 0xF6bFFb9Ce6984DCAE3bf1a85D154757b7BA72c5b
 
 ### Mainnet-Boba
 
