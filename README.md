@@ -28,6 +28,8 @@ DigiDuster gets swap amounts from OolongSwap Factory and Router contracts and is
 
 #### View Live Deployment (Rinkeby-Boba)
 
+{% embed url="https://digiduster-rinkeby.netlify.app" %}
+
 {% content-ref url="guides/deploy-locally.md" %}
 [deploy-locally.md](guides/deploy-locally.md)
 {% endcontent-ref %}
