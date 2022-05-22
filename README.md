@@ -1,15 +1,33 @@
-# Basic Sample Hardhat Project
+---
+description: >-
+  L2 Rollathon: Boba Network Bounty, A solution for cleaning up dust. Built on
+  Boba.
+---
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+# DigiDuster
 
-Try running some of the following tasks:
+DigiDuster **exchanges** unwanted **non performing tokens**, or tokens that can not be sold for lack of liquidity, **to** **DUST tokens** or partner tokens possibly. Users are incentivized by a multiplier on the DUST tokens they receive back, to guarantee greater value and a liquid token.
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+{% hint style="info" %}
+DigiDuster gets swap amounts from OolongSwap Factory and Router contracts and is only fully functional on Mainnet-Boba or a Fork on Localhost currently.&#x20;
+{% endhint %}
+
+#### Roadmap
+
+* [x] Token Multiply and Swap Contract
+* [x] Token Wallet approves tokens
+* [x] Owner can change max Token limit and multiplier
+* [x] User approves tokens
+* [x] User can swap tokens
+* [x] Forked Mainnet Deployment
+* [ ] DUST Mainnet Deployment
+* [ ] DigiDuster Mainnet Deployment
+* [ ] Add Pair and Liquidity on OolongSwap
+
+#### View Demo Video
+
+#### View Live Deployment (Rinkeby-Boba)
+
+{% content-ref url="guides/deploy-locally.md" %}
+[deploy-locally.md](guides/deploy-locally.md)
+{% endcontent-ref %}
