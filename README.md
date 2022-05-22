@@ -20,6 +20,7 @@ DigiDuster gets swap amounts from OolongSwap Factory and Router contracts and is
 * [x] User approves tokens
 * [x] User can swap tokens
 * [x] Forked Mainnet Deployment
+* [x] Rinkeby-Boba Deployment
 * [ ] DUST Mainnet Deployment
 * [ ] DigiDuster Mainnet Deployment
 * [ ] Add Pair and Liquidity on OolongSwap
