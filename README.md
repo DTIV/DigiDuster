@@ -9,7 +9,7 @@ description: >-
 DigiDuster **exchanges** unwanted **non performing tokens**, or tokens that can not be sold for lack of liquidity, **to** **DUST tokens** or partner tokens possibly. Users are incentivized by a multiplier on the DUST tokens they receive back, to guarantee greater value and a liquid token.
 
 {% hint style="info" %}
-DigiDuster gets swap amounts from OolongSwap Factory and Router contracts and is only fully functional on Mainnet-Boba or a Fork on Localhost currently.&#x20;
+DigiDuster gets swap amounts from OolongSwap Factory and Router contracts and is only accurate on Mainnet-Boba or a Fork on Localhost currently.&#x20;
 {% endhint %}
 
 #### Roadmap
@@ -20,6 +20,7 @@ DigiDuster gets swap amounts from OolongSwap Factory and Router contracts and is
 * [x] User approves tokens
 * [x] User can swap tokens
 * [x] Forked Mainnet Deployment
+* [x] Rinkeby-Boba Deployment
 * [ ] DUST Mainnet Deployment
 * [ ] DigiDuster Mainnet Deployment
 * [ ] Add Pair and Liquidity on OolongSwap
