@@ -2,7 +2,6 @@ import Account from './Account';
 import Network from "./Network";
 import ConnectButton from './ConnectButton';
 import "./header.css"
-import Logo from "../../img/logo.png";
 
 const Header = (props) => {
     return (
@@ -14,7 +13,7 @@ const Header = (props) => {
                 <h1 className='main-title'>DigiDuster</h1>
             </div>
             <div className='menu-btn-wrap'>
-                <a className='menu-btn' href="https://dtiv.gitbook.io/token-multiplier/" target="__blank">Docs</a>
+                <a className='menu-btn' href="https://dtiv.gitbook.io/digiduster/" target="__blank">Docs</a>
             </div>
             <div className='account-top'>
                 <ConnectButton connecting={props.connecting} connected={props.connected} connect={props.connect} />

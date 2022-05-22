@@ -3,14 +3,14 @@ const { artifacts } = require("hardhat");
 const hre = require("hardhat");
 
 const deploy_rando = false;
-const deploy_dust = true;
-const deploy_swap = false;
+const deploy_dust =false;
+const deploy_swap = true;
 
 async function main() {
   const [deployer] = await hre.ethers.getSigners();
 
-  const tokenWallet = "0x0Fb605F3d716F5C9DdFdE424BFFDD4d583c2c02A";
-  const DUST = "0x88e0EbfD03240A5013231a58BfF7427b122d97C7" //DUST FAKE (TEST)
+  const tokenWallet = "0x2EEA22950237bCb9fbb5BFD3A1D9B80F2209EDAc";
+  const DUST = "0x204e78418F3cFF7AFb55B5EefF8357873C9121aA" //DUST FAKE (TEST)
 
   let Token;
 

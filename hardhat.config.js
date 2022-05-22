@@ -25,10 +25,6 @@ const GANACHE_URL = process.env.GANACHE_URL
 const GANACHE_PK1 = process.env.GANACHE_PK1
 const GANACHE_PK2 = process.env.GANACHE_PK2
 
-const BOBA_RINK_PK1 = process.env.BOBA_RINK_PK1
-const BOBA_RINK_PK2 = process.env.BOBA_RINK_PK2
-
-console.log("HERE",GANACHE_PK1)
 module.exports = {
   solidity: "0.6.6",
   networks:{
@@ -48,14 +44,6 @@ module.exports = {
       url: GANACHE_URL,
       accounts: [GANACHE_PK2]
     },
-    ganache_boba_rinkeby : {
-      url: GANACHE_URL,
-      accounts: [BOBA_RINK_PK1]
-    },
-    ganache_boba_rinkeby2 : {
-      url: GANACHE_URL,
-      accounts: [BOBA_RINK_PK2]
-    }
   },
   paths: {
     artifacts: "./src/hardhat/artifacts",

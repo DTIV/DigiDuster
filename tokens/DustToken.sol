@@ -7,7 +7,7 @@ contract DigiDust is ERC20 {
     address owner;
 
     mapping(address => uint256) balances;
-    constructor() ERC20('DigiDust', 'DUST'){
+    constructor() ERC20('OLO', 'OLO'){
         _mint(msg.sender, 1000000000000 * (10**18));
     }
 }

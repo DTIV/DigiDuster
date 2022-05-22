@@ -1,6 +1,6 @@
 import React from 'react'
 import TokenList from './TokenList'
-import Logo from "../../img/logo.png";
+
 
 const Modal = (props) => {
     const closeModal = () => {
@@ -41,7 +41,7 @@ const Modal = (props) => {
                     </form>
                     
                     <div className=''>
-                        <TokenList data={Logo}/>
+                        <TokenList />
                     </div>
                 </div>
             </div>

@@ -118,9 +118,7 @@ function App() {
     const provider = detectProvider()
     const eth = new ethers.providers.Web3Provider(provider)
     const signer = eth.getSigner()
-    const tokenWallet= process.env.REACT_APP_TOKEN_WALLET_ETH2 || "0x0Fb605F3d716F5C9DdFdE424BFFDD4d583c2c02A"
-
-    
+    const tokenWallet= process.env.REACT_APP_TOKEN_WALLET_ETH
     const DUSTContract = new ethers.Contract(DUST, DUSTabi, signer)
     const Swap = new ethers.Contract(SwapContract, SwapABI, signer)
     const allow = await DUSTContract.allowance(tokenWallet, Swap.address);

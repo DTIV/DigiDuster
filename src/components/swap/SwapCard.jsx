@@ -2,7 +2,6 @@ import React from 'react'
 import "./swap.css"
 import { useState, useEffect } from 'react';
 import { BsArrowDownCircle } from "react-icons/bs";
-import Logo from "../../img/logo.png";
 import Modal from './Modal';
 import ApproveTokens from '../buttons/ApproveTokens';
 import { ethers } from 'ethers';
@@ -47,6 +46,11 @@ const SwapCard = (props) => {
     const OMG = "0xe1E2ec9a85C607092668789581251115bCBD20de" //TRANSFER TOKEN
     const WETH = "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"; // TRANSFER TOKEN WETH
     const OLO = "0x5008F837883EA9a07271a1b5eB0658404F5a9610"; //REAL CONTRACT OLO(IN PLACE OF DUST)
+
+    // const BDOGE = "0x8c6768bb5448F910D15AdAa1Cf6B0076c6487962" //Real BDOGE (IN PLACE OF RANDOM TOKEN)
+    // const OMG = "0xC5086AA4BB6F18B3D966381E18Bcc317CeD9507c" //TRANSFER TOKEN
+    // const WETH = "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"; // TRANSFER TOKEN WETH
+    // const OLO = "0x4204a0aF0991b2066d2D617854D5995714a79132"; //REAL CONTRACT OLO(IN PLACE OF DUST)
     const uRouterV2 = process.env.REACT_APP_ROUTER_ETH
 
     const provider = detectProvider()
@@ -54,14 +58,21 @@ const SwapCard = (props) => {
     const signer = eth.getSigner()
     const router = new ethers.Contract(uRouterV2, IUniswapV2Router02.abi, signer)
     const tk = ethers.utils.parseEther(tokenAmount.toString())
-
+    console.log(parseInt(tk))
     if(parseInt(tk)){
-      const amountOut = await router.getAmountsOut(tk, [BDOGE,OMG,WETH,OLO])
-      const amountBefore = Number(amountOut[3])
-      const amountAfter = amountBefore * multiplier
-      setAmtBefore(amountBefore/(10**18));
-      console.log(amountBefore/(10**18))
-      setAmtReceiving(amountAfter);
+      try{
+        const amountOut = await router.getAmountsOut(tk, [BDOGE,OMG,WETH,OLO])
+        const amountBefore = Number(amountOut[3])
+        const amountAfter = amountBefore * multiplier
+        setAmtBefore(amountBefore/(10**18));
+        setAmtReceiving(amountAfter);
+      }catch{
+        const amountBefore = parseInt(tk);
+        const amountAfter = parseInt(tk) * multiplier;
+        setAmtBefore(amountBefore/(10**18));
+        setAmtReceiving(amountAfter);
+      }
+      
     }
   }
 
@@ -150,7 +161,7 @@ const SwapCard = (props) => {
               <div className='change-token'>
                 <div className='token-wrap'>
                   <div className='swap-logo'>
-                    <img className='swap-logo-img' src={Logo} alt="" />
+                    <img className='swap-logo-img' alt="" />
                   </div>
                   <div>{tokenName}</div>
                 </div>
@@ -169,7 +180,7 @@ const SwapCard = (props) => {
             <div className='input-wrap'>
               <div className='token-wrap'>
                 <div className='swap-logo'>
-                  <img className='swap-logo-img' src={Logo} alt="" />
+                  <img className='swap-logo-img' alt="" />
                 </div>
                 <div>{props.symbol}</div>
               </div>

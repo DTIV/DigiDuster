@@ -66,7 +66,7 @@ const ApproveTokens = (props) => {
         }
     }else{
         // OWNER DOES NOT HAVE TOKENS APPROVED FOR SWAP
-        if(user === process.env.REACT_APP_TOKEN_WALLET_ETH || user === process.env.REACT_APP_TOKEN_WALLET_BSC){
+        if(user === process.env.REACT_APP_TOKEN_WALLET_ETH){
             // OWNER CAN APPROVE TOKENS
             return (
                 <div>
@@ -77,7 +77,7 @@ const ApproveTokens = (props) => {
         return (
             // USERS ARE DISABLED FROM APPROVING
             <div>
-                <button className='swap-btn' disabled>Approve</button>
+                <button className='swap-btn' disabled>Approved</button>
             </div>
         )
     }

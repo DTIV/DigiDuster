@@ -3,7 +3,6 @@ import { ethers } from 'ethers';
 import { detectProvider } from '../../functions';
 var bigInt = require("big-integer");
 
-
 const SwapTokens = (props) => {
     const SwapContract = props.swapContract;
     const SwapABI = props.swapABI;
@@ -29,7 +28,7 @@ const SwapTokens = (props) => {
             }
         }else{
             // perform logic for bnb transfer
-            console.log("No Contract -- BNB Swap")
+            console.log("No Contract -- ETH Swap")
         }
     }
 
