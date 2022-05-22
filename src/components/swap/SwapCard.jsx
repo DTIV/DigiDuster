@@ -47,10 +47,6 @@ const SwapCard = (props) => {
     const WETH = "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"; // TRANSFER TOKEN WETH
     const OLO = "0x5008F837883EA9a07271a1b5eB0658404F5a9610"; //REAL CONTRACT OLO(IN PLACE OF DUST)
 
-    // const BDOGE = "0x8c6768bb5448F910D15AdAa1Cf6B0076c6487962" //Real BDOGE (IN PLACE OF RANDOM TOKEN)
-    // const OMG = "0xC5086AA4BB6F18B3D966381E18Bcc317CeD9507c" //TRANSFER TOKEN
-    // const WETH = "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000"; // TRANSFER TOKEN WETH
-    // const OLO = "0x4204a0aF0991b2066d2D617854D5995714a79132"; //REAL CONTRACT OLO(IN PLACE OF DUST)
     const uRouterV2 = process.env.REACT_APP_ROUTER_ETH
 
     const provider = detectProvider()
@@ -58,7 +54,7 @@ const SwapCard = (props) => {
     const signer = eth.getSigner()
     const router = new ethers.Contract(uRouterV2, IUniswapV2Router02.abi, signer)
     const tk = ethers.utils.parseEther(tokenAmount.toString())
-    console.log(parseInt(tk))
+
     if(parseInt(tk)){
       try{
         const amountOut = await router.getAmountsOut(tk, [BDOGE,OMG,WETH,OLO])
